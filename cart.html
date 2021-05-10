@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<meta charset = "UTF-8">
+        <meta name = "viewpoint" content = "width = device-width, initial-scale = 5.0">
+        <meta http-equiv = "X-UA-compatible" content = "ie=edge">
+        <title>Height, width, borders, background, css</title>
+        <style>
+        body 
+           {
+                 background-color: lightblue;
+           }
+           #d
+           {
+             color: #0000ff;
+             font-size: medium;
+           }
+           #b
+           {
+             text-align: center;
+             color: #ff0000;
+           }
+            #firstpara
+            {
+                text-align: center;
+                height: 200px;
+                width: 220px;
+                background-image: url('https://i.pinimg.com/236x/2a/48/ca/2a48cae52a31e76376d82ba4bb32824a--online-book-store-books-online.jpg');
+            }
+        </style>
+        
+      <h1 id = "firstpara"></h1>
+     <h1 id = "b">Cart</h1>
+     <ol>
+         {% for book in books %}
+            <li id = "d">{{ book.title }}</li>
+         {% endfor %} 
+     <ol>   
+         
+{% endblock %}
